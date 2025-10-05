@@ -4,28 +4,59 @@
   <meta charset="UTF-8">
   <title>Contact - Ausstech Consulting</title>
   <style>
-    html, body {margin:0;padding:0;height:100%;font-family:Arial,sans-serif;}
-    body {background:url('background.jpg') no-repeat center center fixed;background-size:cover;color:white;}
-    .overlay {background-color:rgba(0,0,0,0.6);min-height:100vh;padding:20px;}
-    nav ul {list-style:none;display:flex;gap:20px;padding:0;margin:0;}
-    nav a {color:white;text-decoration:none;font-weight:bold;}
-    nav a:hover {text-decoration:underline;}
-    h1,p {margin-top:20px;}
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+    nav li {
+      display: inline;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    h1, p {
+      margin-top: 20px;
+    }
   </style>
 </head>
 <body>
   <div class="overlay">
     <nav>
       <ul>
-        <li><a href="index.html/li>
-        <li>services.htmlIT Services</a></li>
-        <li>cybersecurity.htmlCybersecurity</a></li>
-        <li>consulting.htmlConsulting</a></li>
-        <li>contact.htmlContact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">IT Services</a></li>
+        <li><a href="cybersecurity.html">Cybersecurity</a></li>
+        <li><a href="consulting.html">Consulting</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <h1>Contact Us</h1>
-    <p>Email: info@ausstech.com.au<br>Phone: +61 2 1234 5678</p>
+    <p>Email: <a href="mailto:info@ausstech.com.au" style="color:white;">info@ausstech.com.au</a><br>
+       Phone: <a href="tel:+61212345678" style="color:white;">+61 2 1234 5678</a></p>
   </div>
 </body>
 </html>
