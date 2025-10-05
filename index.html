@@ -8,14 +8,14 @@
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
+      background-color: #f4f6f8;
       color: #333;
     }
     header {
-      background-color: #003366;
+      background-color: #002b5c;
       color: white;
-      padding: 20px;
       text-align: center;
+      padding: 30px 20px;
     }
     header img {
       max-height: 100px;
@@ -27,35 +27,37 @@
       margin: 10px 0;
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
     }
     nav ul li a {
       color: white;
       text-decoration: none;
       font-weight: bold;
+      font-size: 16px;
     }
     .container {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
       padding: 20px;
     }
     section {
       background-color: white;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 30px;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #002b5c;
     }
     footer {
-      background-color: #003366;
+      background-color: #002b5c;
       color: white;
       text-align: center;
-      padding: 10px;
+      padding: 15px;
     }
-    @media (min-width: 768px) {
-      .container {
-        grid-template-columns: repeat(2, 1fr);
-      }
+    a {
+      color: #0056b3;
     }
   </style>
 </head>
@@ -75,12 +77,26 @@
   <div class="container">
     <section id="services">
       <h2>Our Services</h2>
-      <p>We specialize in IT infrastructure, cybersecurity, ERP solutions, and business consulting tailored for Australian businesses. Our team delivers reliable, scalable, and secure systems that empower growth.</p>
+      <p>At Ausstech Consulting Services, we deliver tailored IT solutions that empower businesses to thrive in a digital-first world. Our core offerings include:</p>
+      <ul>
+        <li><strong>IT Infrastructure Deployment:</strong> End-to-end setup of secure, scalable networks including NBN FTTP/FTTC integration, server configuration, and cloud migration.</li>
+        <li><strong>Cybersecurity Consulting:</strong> Risk assessments, firewall implementation, endpoint protection, and compliance strategies to safeguard your digital assets.</li>
+        <li><strong>ERP Solutions:</strong> Custom ERP planning and deployment to streamline operations, improve data visibility, and enhance productivity.</li>
+        <li><strong>Business Technology Advisory:</strong> Strategic consulting for startups and SMEs on digital transformation, system integration, and IT budgeting.</li>
+        <li><strong>Website Development & Hosting:</strong> Responsive, SEO-optimized websites built with HTML/CSS and hosted via GitHub Pages or custom domains.</li>
+      </ul>
     </section>
 
     <section id="about">
       <h2>About Kamal</h2>
-      <p>Hi, I'm Kamal — Project Manager at Decon Technologies and Owner of Ausstech Consulting Services Pty Ltd. With deep expertise in NBN standards, IT deployment, and business consulting, I bring strategic leadership and hands-on technical skills to every project.</p>
+      <p>Hi, I'm <strong>Kamal</strong> — Project Manager at Decon Technologies and Owner of Ausstech Consulting Services Pty Ltd. With over a decade of experience across the energy and IT sectors, I bring a unique blend of strategic leadership and technical expertise. My background includes:</p>
+      <ul>
+        <li>Managing complex NBN programs including Held Order, Relocation, and MDU deployments</li>
+        <li>Deep knowledge of NBN standards (SC1, SC2, SC3, Type2, Type3)</li>
+        <li>Advanced skills in Power BI, Excel, VBA, and SLA/KPI management</li>
+        <li>Strong stakeholder engagement and program delivery across IT and energy domains</li>
+      </ul>
+      <p>I’m passionate about helping businesses build reliable digital infrastructure and achieve operational excellence through smart technology.</p>
     </section>
 
     <section id="contact">
@@ -88,6 +104,7 @@
       <p><strong>Name:</strong> Kamal</p>
       <p><strong>Phone:</strong> 0416 236 105</p>
       <p><strong>Email:</strong> kamal@ausstech.com.au</p>
+      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
     </section>
   </div>
 
