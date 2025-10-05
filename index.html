@@ -2,57 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ausstech Consulting Services - IT & Cybersecurity Solutions">
   <title>Home - Ausstech Consulting</title>
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
-    body {
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
-    }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
-      padding: 20px;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-      padding: 0;
-      margin: 0;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    h1, p {
-      margin-top: 20px;
-    }
+    html, body {margin:0;padding:0;height:100%;font-family:Arial,sans-serif;}
+    body {background:url('background.jpg') no-repeat center center fixed;background-size:cover;color:white;}
+    .overlay {background-color:rgba(0,0,0,0.6);min-height:100vh;padding:20px;display:flex;flex-direction:column;}
+    nav ul {list-style:none;display:flex;gap20px;padding:0;margin:0;}
+    nav a {color:white;text-decoration:none;font-weight:bold;}
+    nav a:hover {text-decoration:underline;}
+    header, footer {text-align:center;margin:20px 0;}
+    main {flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;}
+    h1 {font-size:2.5em;margin-bottom:10px;}
+    p {font-size:1.2em;max-width:600px;}
   </style>
 </head>
 <body>
   <div class="overlay">
-    <nav>
-      <ul>
-        <li><a href="lHome</a></li>
-        <li>services.htmlIT Services</a></li>
-        <li>cybersecurity.htmlCybersecurity</a></li>
-        <li>consulting.htmlConsulting</a></li>
-        <li>contact.htmlContact</a></li>
-      </ul>
-    </nav>
-    <h1>Welcome to Ausstech Consulting Services</h1>
-    <p>We provide IT and cybersecurity solutions to help your business thrive in the digital era.</p>
+    <header>
+      <nav>
+        <ul>
+          <li>index.htmlHome</a></li>
+          <li>services.htmlIT Services</a></li>
+          <li>cybersecurity.htmlCybersecurity</a></li>
+          <li>consulting.htmlConsulting</a></li>
+          <li>contact.htmlContact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h1>Welcome to Ausstech Consulting Services</h1>
+      <p>We provide IT and cybersecurity solutions to help your business thrive in the digital era. Explore our services and discover how we can support your growth.</p>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Ausstech Consulting Services. All rights reserved.</p>
+    </footer>
   </div>
 </body>
 </html>
