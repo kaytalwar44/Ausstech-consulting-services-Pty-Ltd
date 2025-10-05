@@ -1,138 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ausstech Consulting Services</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #d3d3d3; /* Light grey background */
-      color: #333;
-    }
-
-    header {
-      background-color: #002b5c;
-      color: white;
-      text-align: center;
-      padding: 30px 20px;
-    }
-
-    header img {
-      max-height: 100px;
-      margin-bottom: 10px;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-    }
-
-    nav ul li a {
-      color: #ffffff;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 16px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    section {
-      background-color: #ffffff;
-      color: #333;
-      padding: 30px;
-      margin-bottom: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-
-    h2 {
-      color: #003366;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    footer {
-      background-color: #002b5c;
-      color: white;
-      text-align: center;
-      padding: 15px;
-    }
-
-    a {
-      color: #0056b3;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <img src="logo.png" alt="Ausstech Logo" />
-    <h1>Ausstech Consulting Services</h1>
-    <nav>
-      <ul>
-        <li><a href="#overview">Overview</a></li>
-        <li><a href="#services">IT Services</a></li>
-        <li><a href="#cybersecurity">Cybersecurity</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div class="container">
-    <section id="overview">
-      <h2>Company Overview</h2>
-      <p><strong>Ausstech Consulting Services</strong> is a leading provider of end-to-end IT and cybersecurity solutions, dedicated to empowering businesses with innovative, secure, and scalable technology. Headquartered in <strong>Sydney, NSW</strong>, we serve a diverse clientele including <em>I-connected</em> and <em>Precision Cabling</em>, delivering tailored services that align with each client’s strategic goals.</p>
-      <h3>Our Mission</h3>
-      <p>To deliver reliable, future-ready IT and cybersecurity solutions that enable businesses to thrive in a digitally connected world.</p>
-    </section>
-
-    <section id="services">
-      <h2>Core IT Services</h2>
-      <ul>
-        <li><strong>Managed IT Services:</strong> Comprehensive support including proactive monitoring, helpdesk, asset management, and system maintenance.</li>
-        <li><strong>Cloud Solutions:</strong> Migration and optimization for Azure, AWS, and Google Cloud. Includes infrastructure setup, backups, and cloud security.</li>
-        <li><strong>Network Design & Implementation:</strong> Structured cabling, wireless networks, VPNs, and firewall configuration for secure connectivity.</li>
-        <li><strong>IT Consulting & Project Management:</strong> Strategic guidance on digital transformation, IT governance, and full project delivery.</li>
-        <li><strong>Software Development & Integration:</strong> Custom web/mobile apps, CRM systems, and ERP integrations for streamlined operations.</li>
-      </ul>
-    </section>
-
-    <section id="cybersecurity">
-      <h2>Cybersecurity Services</h2>
-      <ul>
-        <li><strong>Security Assessments & Audits:</strong> Identify vulnerabilities and ensure compliance with ISO 27001 and the Essential Eight.</li>
-        <li><strong>Threat Detection & Response:</strong> Real-time monitoring, incident response, and forensic analysis via our 24/7 SOC.</li>
-        <li><strong>Data Protection & Privacy:</strong> Encryption, secure backups, and privacy compliance with the Australian Privacy Act and GDPR.</li>
-        <li><strong>Endpoint & Email Security:</strong> Protection against malware, phishing, and ransomware using layered security tools.</li>
-        <li><strong>Security Awareness Training:</strong> Staff education on best practices, social engineering, and secure online behavior.</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p><strong>Company Director:</strong> Kamal Sardana</p>
-      <p><strong>Phone:</strong> 0416 236 105</p>
-      <p><strong>Email:</strong> <a href="mailto:kaytalwar44@gmail.com">kaytalwar44@gmail.com</a></p>
-      <p><strong>Location:</strong> Sydney, NSW</p>
-    </section>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Ausstech Consulting Services Pty Ltd</p>
-  </footer>
-</body>
-</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ausstech Consulting Services</title>
 <style>
   body {
     margin: 0;
@@ -141,20 +12,64 @@
     background-size: cover;
     color: #333;
   }
-
-  header {
-    background-color: rgba(0, 43, 92, 0.8); /* Semi-transparent overlay */
+  header, footer {
+    background-color: rgba(0, 43, 92, 0.85);
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 15px;
   }
-
+  header img {
+    max-height: 80px;
+    margin-bottom: 10px;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
   section {
-    background-color: rgba(255, 255, 255, 0.9); /* Light overlay for readability */
-    color: #333;
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 30px;
-    margin-bottom: 20px;
+    margin: 20px auto;
+    max-width: 1000px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 </style>
+</head>
+<body>
+<header>
+  logo.png
+  <h1>Ausstech Consulting Services</h1>
+  <nav>
+    <ul>
+      <li>index.htmlHome</a></li>
+      <li>services.htmlIT Services</a></li>
+      <li>cybersecurity.htmlCybersecurity</a></li>
+      <li>consulting.htmlConsulting Doc</a></li>
+      <li>contact.htmlContact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section>
+  <h2>Welcome to Ausstech Consulting Services</h2>
+  <p><strong>Ausstech Consulting Services</strong> is your trusted partner for IT solutions, cybersecurity, and digital transformation. We deliver innovative, secure, and scalable technology solutions tailored to your business needs.</p>
+  <h3>Our Mission</h3>
+  <p>To empower businesses with reliable, future-ready IT and cybersecurity solutions that drive growth and resilience in a connected world.</p>
+</section>
+
+<footer>
+  <p>&copy; 2025 Ausstech Consulting Services Pty Ltd</p>
+</footer>
+</body>
+</html>
