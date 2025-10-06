@@ -63,6 +63,56 @@
       font-size: 1.2em;
       max-width: 600px;
     }
+
+    /* 🔧 Services Section Styling */
+    #services {
+      background-color: rgba(255, 255, 255, 0.9);
+      color: #333;
+      padding: 40px 20px;
+      border-radius: 10px;
+      margin-top: 40px;
+    }
+    #services h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    .service-card {
+      background-color: #f9f9f9;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 300px;
+      box-sizing: border-box;
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card h3 {
+      margin-top: 0;
+      color: #0077b6;
+    }
+    .service-card p {
+      color: #555;
+    }
+    @media (min-width: 600px) {
+      .service-card {
+        width: calc(50% - 20px);
+      }
+    }
+    @media (min-width: 900px) {
+      .service-card {
+        width: calc(33.333% - 20px);
+      }
+    }
   </style>
 </head>
 <body>
@@ -82,6 +132,44 @@
     <main>
       <h1>Welcome to Ausstech Consulting Services</h1>
       <p>We provide IT and cybersecurity solutions to help your business thrive in the digital era. Explore our services and discover how we can support your growth.</p>
+
+      <!-- 🔽 New Services Section -->
+      <section id="services">
+        <h2>Our Services</h2>
+        <div class="services-container">
+
+          <div class="service-card">
+            <h3>IT Consulting</h3>
+            <p>Expert guidance on IT infrastructure, cybersecurity, and digital transformation tailored to your business needs.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Website Development</h3>
+            <p>Custom website design and hosting solutions to establish and grow your online presence.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>ERP & App Support</h3>
+            <p>Implementation and support for ERP systems and business applications to streamline operations.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Project Admin Support</h3>
+            <p>Efficient coordination, documentation, and scheduling to keep your projects on track and well-managed.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>Bookkeeping</h3>
+            <p>Accurate financial record-keeping, invoicing, and reconciliation to support your business operations.</p>
+          </div>
+
+          <div class="service-card">
+            <h3>General Office Works</h3>
+            <p>Reliable assistance with day-to-day office tasks including data entry, filing, and administrative support.</p>
+          </div>
+
+        </div>
+      </section>
     </main>
 
     <footer>
