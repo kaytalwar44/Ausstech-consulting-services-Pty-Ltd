@@ -4,176 +4,215 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Ausstech Consulting Services - IT & Cybersecurity Solutions" />
-  <title>Home - Ausstech Consulting</title>
+  <title>Ausstech Consulting - Home</title>
+
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
     body {
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
     }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
+
+    /* NAVIGATION */
+    nav {
+      background: #ffffff;
+      padding: 15px 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
-      padding: 0;
+      gap: 25px;
       margin: 0;
+      padding: 0;
       justify-content: center;
-    }
-    nav li {
-      display: inline;
     }
     nav a {
-      color: white;
       text-decoration: none;
+      color: #0077b6;
       font-weight: bold;
+      font-size: 1.1em;
     }
     nav a:hover {
-      text-decoration: underline;
-    }
-    header, footer {
-      text-align: center;
-      margin: 20px 0;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    p {
-      font-size: 1.2em;
-      max-width: 600px;
+      color: #005f8a;
     }
 
-    /* 🔧 Services Section Styling */
+    /* HERO SECTION */
+    .hero {
+      background: linear-gradient(to right, #0077b6, #0096c7);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.3em;
+      max-width: 700px;
+      margin: 0 auto 30px;
+    }
+    .hero .cta-btn {
+      background: white;
+      color: #0077b6;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .hero .cta-btn:hover {
+      background: #e3e3e3;
+    }
+
+    /* SERVICES SECTION */
     #services {
-      background-color: rgba(255, 255, 255, 0.9);
-      color: #333;
-      padding: 40px 20px;
-      border-radius: 10px;
-      margin-top: 40px;
+      padding: 60px 20px;
+      background: #ffffff;
     }
     #services h2 {
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 2em;
+      font-size: 2.2em;
+      margin-bottom: 40px;
+      color: #0077b6;
     }
     .services-container {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
     }
     .service-card {
-      background-color: #f9f9f9;
-      padding: 20px;
+      background: #f9f9f9;
+      padding: 25px;
       border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       width: 100%;
       max-width: 300px;
-      box-sizing: border-box;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
     .service-card:hover {
       transform: translateY(-5px);
     }
     .service-card h3 {
-      margin-top: 0;
       color: #0077b6;
+      margin-top: 0;
     }
     .service-card p {
       color: #555;
     }
-    @media (min-width: 600px) {
-      .service-card {
-        width: calc(50% - 20px);
-      }
+
+    /* WHY CHOOSE US */
+    #why-us {
+      padding: 60px 20px;
+      background: #f5f7fa;
+      text-align: center;
     }
-    @media (min-width: 900px) {
-      .service-card {
-        width: calc(33.333% - 20px);
-      }
+    #why-us h2 {
+      font-size: 2.2em;
+      color: #0077b6;
+      margin-bottom: 30px;
+    }
+    .why-list {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: left;
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #003049;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
+
 <body>
-  <div class="overlay">
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">IT Services</a></li>
-          <li><a href="cybersecurity.html">Cybersecurity</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <h1>Welcome to Ausstech Consulting Services</h1>
-      <p>We provide IT and cybersecurity solutions to help your business thrive in the digital era. Explore our services and discover how we can support your growth.</p>
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">IT Services</a></li>
+      <li><a href="cybersecurity.html">Cybersecurity</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
 
-      <!-- 🔽 New Services Section -->
-      <section id="services">
-        <h2>Our Services</h2>
-        <div class="services-container">
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Empowering Your Business with IT & Cybersecurity Excellence</h1>
+    <p>Ausstech Consulting delivers reliable IT solutions, cybersecurity protection, and business support services to help your organisation thrive.</p>
+    <a class="cta-btn" href="services.html">Explore Our Services</a>
+  </section>
 
-          <div class="service-card">
-            <h3>IT Consulting</h3>
-            <p>Expert guidance on IT infrastructure, cybersecurity, and digital transformation tailored to your business needs.</p>
-          </div>
+  <!-- SERVICES -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
 
-          <div class="service-card">
-            <h3>Website Development</h3>
-            <p>Custom website design and hosting solutions to establish and grow your online presence.</p>
-          </div>
+      <div class="service-card">
+        <h3>IT Consulting</h3>
+        <p>Expert guidance on IT infrastructure, cybersecurity, and digital transformation tailored to your business needs.</p>
+      </div>
 
-          <div class="service-card">
-            <h3>ERP & App Support</h3>
-            <p>Implementation and support for ERP systems and business applications to streamline operations.</p>
-          </div>
+      <div class="service-card">
+        <h3>Website Development</h3>
+        <p>Custom website design and hosting solutions to establish and grow your online presence.</p>
+      </div>
 
-          <div class="service-card">
-            <h3>Project Admin Support</h3>
-            <p>Efficient coordination, documentation, and scheduling to keep your projects on track and well-managed.</p>
-          </div>
+      <div class="service-card">
+        <h3>ERP & App Support</h3>
+        <p>Implementation and support for ERP systems and business applications to streamline operations.</p>
+      </div>
 
-          <div class="service-card">
-            <h3>Bookkeeping</h3>
-            <p>Accurate financial record-keeping, invoicing, and reconciliation to support your business operations.</p>
-          </div>
+      <div class="service-card">
+        <h3>Project Admin Support</h3>
+        <p>Efficient coordination, documentation, and scheduling to keep your projects on track and well-managed.</p>
+      </div>
 
-          <div class="service-card">
-            <h3>General Office Works</h3>
-            <p>Reliable assistance with day-to-day office tasks including data entry, filing, and administrative support.</p>
-          </div>
+      <div class="service-card">
+        <h3>Bookkeeping</h3>
+        <p>Accurate financial record-keeping, invoicing, and reconciliation to support your business operations.</p>
+      </div>
 
-        </div>
-      </section>
-    </main>
+      <div class="service-card">
+        <h3>General Office Works</h3>
+        <p>Reliable assistance with day-to-day office tasks including data entry, filing, and administrative support.</p>
+      </div>
 
-    <footer>
-      <p>&copy; 2025 Ausstech Consulting Services. All rights reserved.</p>
-    </footer>
-  </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section id="why-us">
+    <h2>Why Choose Ausstech Consulting?</h2>
+    <div class="why-list">
+      <ul>
+        <li>✔ Professional IT & cybersecurity expertise</li>
+        <li>✔ Affordable solutions for small and medium businesses</li>
+        <li>✔ Fast response and reliable support</li>
+        <li>✔ Tailored services to match your business goals</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Ausstech Consulting Services. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
