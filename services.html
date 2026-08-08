@@ -1,109 +1,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>IT Services - Ausstech Consulting</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ausstech Consulting - IT & Business Services" />
+  <title>Services - Ausstech Consulting</title>
+
   <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: Arial, sans-serif;
-    }
     body {
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: white;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
     }
-    .overlay {
-      background-color: rgba(0, 0, 0, 0.6);
-      min-height: 100vh;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
+
+    /* NAVIGATION */
+    nav {
+      background: #ffffff;
+      padding: 15px 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
     nav ul {
       list-style: none;
       display: flex;
-      gap: 20px;
-      padding: 0;
+      gap: 25px;
       margin: 0;
+      padding: 0;
       justify-content: center;
-    }
-    nav li {
-      display: inline;
     }
     nav a {
-      color: white;
       text-decoration: none;
+      color: #0077b6;
       font-weight: bold;
+      font-size: 1.1em;
     }
-nav a:hover {
-      text-decoration: underline;
+    nav a:hover {
+      color: #005f8a;
     }
-    header, footer {
-      text-align: center;
-      margin: 20px 0;
-    }
-    main {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+
+    /* PAGE HEADER */
+    .page-header {
+      background: linear-gradient(to right, #0077b6, #0096c7);
+      color: white;
+      padding: 80px 20px;
       text-align: center;
     }
-    h1 {
-      font-size: 2.5em;
+    .page-header h1 {
+      font-size: 2.8em;
       margin-bottom: 10px;
-}
-    ul.services {
-      list-style: none;
-      padding: 0;
-      margin: 20px auto;
-      max-width: 600px;
+    }
+    .page-header p {
       font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
     }
-    ul.services li {
-      margin-bottom: 10px;
-      background-color: rgba(255, 255, 255, 0.1);
-      padding: 10px;
-      border-radius: 5px;
+
+    /* SERVICES SECTION */
+    #services {
+      padding: 60px 20px;
+      background: #ffffff;
+    }
+    #services h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 40px;
+      color: #0077b6;
+    }
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+    }
+    .service-card {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-card h3 {
+      color: #0077b6;
+      margin-top: 0;
+    }
+    .service-card p {
+      color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #003049;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
-<body>
-  <div class="overlay">
-    <header>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="services.html">IT Services</a></li>
-          <li><a href="cybersecurity.html">Cybersecurity</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
-<main>
-      <h1>Our IT & Business Support Services</h1>
-      <ul class="services">
-        <li>Cloud solutions and infrastructure setup</li>
-        <li>Server configuration and optimization</li>
-        <li>Firewall design and implementation</li>
-        <li>Network design and implementation</li>
-        <li>Microsoft license sales and support</li>
-        <li>Domain registration and management</li>
-        <li>Power BI dashboards and report automation</li>
-        <li>Project Admin Support – coordination, documentation, and scheduling</li>
-        <li>Bookkeeping – invoicing, reconciliation, and financial record-keeping</li>
-        <li>General Office Works – data entry, filing, and admin assistance</li>
-      </ul>
-    </main>
 
-    <footer>
-      <p>&copy; 2025 Ausstech Consulting Services. All rights reserved.</p>
-    </footer>
-  </div>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">IT Services</a></li>
+      <li><a href="cybersecurity.html">Cybersecurity</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>Our Professional Services</h1>
+    <p>We provide reliable IT, cybersecurity, business support, and digital solutions tailored to your organisation.</p>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services">
+    <h2>What We Offer</h2>
+    <div class="services-container">
+
+      <div class="service-card">
+        <h3>IT Consulting</h3>
+        <p>Infrastructure planning, cybersecurity strategy, cloud solutions, and digital transformation guidance.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Website Development</h3>
+        <p>Custom websites, hosting, maintenance, and SEO‑ready designs to grow your online presence.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>ERP & App Support</h3>
+        <p>Implementation, troubleshooting, and optimisation of ERP systems and business applications.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Project Admin Support</h3>
+        <p>Project coordination, documentation, scheduling, and stakeholder communication support.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Bookkeeping</h3>
+        <p>Accurate financial records, invoicing, reconciliation, and business reporting.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>General Office Works</h3>
+        <p>Data entry, filing, admin support, and day‑to‑day office assistance.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Ausstech Consulting Services. All rights reserved.</p>
+  </footer>
+
+  <!-- GSAP ANIMATION SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+  <script>
+    // PAGE HEADER ANIMATION
+    gsap.from(".page-header h1", {
+      opacity: 0,
+      y: -40,
+      duration: 1.2
+    });
+
+    gsap.from(".page-header p", {
+      opacity: 0,
+      y: 20,
+      duration: 1.2,
+      delay: 0.3
+    });
+
+    // SERVICE CARDS ANIMATION
+    gsap.from(".service-card", {
+      scrollTrigger: {
+        trigger: "#services",
+        start: "top 80%",
+      },
+      opacity: 0,
+      y: 40,
+      duration: 0.8,
+      stagger: 0.2
+    });
+  </script>
+
 </body>
 </html>
