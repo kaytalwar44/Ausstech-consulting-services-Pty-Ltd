@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ausstech Consulting - Professional IT & Business Services" />
+  <meta name="description" content="Ausstech Consulting - IT & Business Services" />
   <title>Services - Ausstech Consulting</title>
 
   <style>
@@ -45,11 +45,11 @@
     .page-header {
       background: #0077b6;
       color: white;
-      padding: 60px 20px;
+      padding: 80px 20px;
       text-align: center;
     }
     .page-header h1 {
-      font-size: 2.5em;
+      font-size: 2.8em;
       margin-bottom: 10px;
     }
     .page-header p {
@@ -108,10 +108,10 @@
 
     /* CTA SECTION */
     .cta-section {
-      background: linear-gradient(to right, #0077b6, #0096c7);
+      background: #003049;
       color: white;
       text-align: center;
-      padding: 60px 20px;
+      padding: 50px 20px;
       margin-top: 50px;
     }
     .cta-section h2 {
@@ -120,7 +120,7 @@
     }
     .cta-section a {
       background: white;
-      color: #0077b6;
+      color: #003049;
       padding: 12px 25px;
       border-radius: 6px;
       font-size: 1.1em;
@@ -135,7 +135,7 @@
 
     /* FOOTER */
     footer {
-      background: #003049;
+      background: #001d33;
       color: white;
       text-align: center;
       padding: 20px;
@@ -151,6 +151,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">IT Services</a></li>
+      <li><a href="nbn.html">NBN Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -158,7 +159,7 @@
   <!-- PAGE HEADER -->
   <section class="page-header">
     <h1>Our Professional Services</h1>
-    <p>Explore our full range of IT, cybersecurity, business support, and digital solutions.</p>
+    <p>Reliable IT, business support, and digital solutions tailored to your organisation.</p>
   </section>
 
   <!-- CATEGORY 1 -->
@@ -177,22 +178,22 @@
       </div>
 
       <div class="service-card">
-        <h3>Cybersecurity Support</h3>
-        <ul>
-          <li>Threat monitoring</li>
-          <li>Security audits</li>
-          <li>Firewall & network protection</li>
-          <li>Incident response</li>
-        </ul>
-      </div>
-
-      <div class="service-card">
         <h3>ERP & App Support</h3>
         <ul>
           <li>ERP implementation</li>
           <li>Application troubleshooting</li>
           <li>Process automation</li>
           <li>System optimisation</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <h3>NBN Services</h3>
+        <ul>
+          <li>Home network setup</li>
+          <li>Internet not working</li>
+          <li>Slow speed issues</li>
+          <li>Customer assistance</li>
         </ul>
       </div>
 
@@ -264,49 +265,37 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2024 Ausstech Consulting Services. All rights reserved.</p>
+    <p>&copy; 2025 Ausstech Consulting Services. All rights reserved.</p>
   </footer>
 
-  <!-- GSAP ANIMATION SCRIPTS -->
+  <!-- GSAP -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
   <script>
-    // HEADER ANIMATION
-    gsap.from(".page-header h1", {
-      opacity: 0,
-      y: -40,
-      duration: 1.2
-    });
+    gsap.from(".page-header h1", { opacity: 0, y: -40, duration: 1.2 });
+    gsap.from(".page-header p", { opacity: 0, y: 20, duration: 1.2, delay: 0.3 });
 
-    gsap.from(".page-header p", {
-      opacity: 0,
-      y: 20,
-      duration: 1.2,
-      delay: 0.3
-    });
-
-    // CATEGORY TITLE ANIMATION
     gsap.from(".category h2", {
-      scrollTrigger: {
-        trigger: ".category",
-        start: "top 85%",
-      },
+      scrollTrigger: { trigger: ".category", start: "top 85%" },
       opacity: 0,
       y: 30,
       duration: 1
     });
 
-    // SERVICE CARDS ZOOM-IN ANIMATION
     gsap.from(".service-card", {
-      scrollTrigger: {
-        trigger: ".category",
-        start: "top 80%",
-      },
+      scrollTrigger: { trigger: ".category", start: "top 80%" },
       opacity: 0,
       scale: 0.8,
       duration: 0.6,
       stagger: 0.2
+    });
+
+    gsap.from(".cta-section", {
+      scrollTrigger: { trigger: ".cta-section", start: "top 90%" },
+      opacity: 0,
+      y: 40,
+      duration: 1
     });
   </script>
 
