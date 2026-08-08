@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ausstech Consulting - NBN Services & Support" />
+  <title>NBN Services - Ausstech Consulting</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      color: #333;
+    }
+
+    /* NAVIGATION */
+    nav {
+      background: #ffffff;
+      padding: 15px 30px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+      justify-content: center;
+    }
+    nav a {
+      text-decoration: none;
+      color: #0077b6;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    nav a:hover {
+      color: #005f8a;
+    }
+
+    /* PAGE HEADER */
+    .page-header {
+      background: linear-gradient(to right, #0077b6, #0096c7);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+    }
+    .page-header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* MAIN CONTENT */
+    .nbn-section {
+      max-width: 1100px;
+      margin: 50px auto;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .nbn-section h2 {
+      font-size: 2.2em;
+      color: #0077b6;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .nbn-section p {
+      font-size: 1.2em;
+      line-height: 1.7;
+      text-align: center;
+      max-width: 900px;
+      margin: 0 auto 30px;
+    }
+
+    /* GRID */
+    .nbn-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .nbn-card {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .nbn-card:hover {
+      transform: translateY(-5px);
+    }
+    .nbn-card h3 {
+      color: #0077b6;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    .nbn-card ul {
+      padding-left: 20px;
+      color: #555;
+      line-height: 1.6;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: #003049;
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+      margin-top: 50px;
+    }
+    .cta-section h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+    .cta-section a {
+      background: white;
+      color: #003049;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .cta-section a:hover {
+      background: #e3e3e3;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #001d33;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">IT Services</a></li>
+      <li><a href="nbn.html">NBN Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <h1>NBN Services</h1>
+    <p>Complete end‑to‑end NBN solutions for homes and businesses — from network setup to troubleshooting.</p>
+  </section>
+
+  <!-- MAIN NBN SECTION -->
+  <section class="nbn-section">
+    <h2>End‑to‑End NBN Solutions</h2>
+    <p>We provide full NBN support including installation, troubleshooting, speed optimisation, and customer assistance. Whether your internet is not working, running slow, or you need a complete home network setup — we handle it all.</p>
+
+    <div class="nbn-grid">
+
+      <div class="nbn-card">
+        <h3>Home Network Setup</h3>
+        <ul>
+          <li>Modem & router installation</li>
+          <li>Wi‑Fi optimisation</li>
+          <li>Device connectivity setup</li>
+          <li>Home network security</li>
+        </ul>
+      </div>
+
+      <div class="nbn-card">
+        <h3>Internet Not Working</h3>
+        <ul>
+          <li>Fault diagnosis</li>
+          <li>Line & signal testing</li>
+          <li>Modem configuration</li>
+          <li>On‑site troubleshooting</li>
+        </ul>
+      </div>
+
+      <div class="nbn-card">
+        <h3>Slow Speed Issues</h3>
+        <ul>
+          <li>Speed testing & analysis</li>
+          <li>Wi‑Fi interference checks</li>
+          <li>Router upgrades</li>
+          <li>Bandwidth optimisation</li>
+        </ul>
+      </div>
+
+      <div class="nbn-card">
+        <h3>Customer Assistance</h3>
+        <ul>
+          <li>Guidance for NBN plans</li>
+          <li>Support dealing with providers</li>
+          <li>Technical help for new users</li>
+          <li>Remote & on‑site support</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <h2>Need Help With Your NBN?</h2>
+    <p>We provide fast, reliable support for all NBN issues.</p>
+    <a href="contact.html">Contact Us</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Ausstech Consulting Services. All rights reserved.</p>
+  </footer>
+
+  <!-- GSAP ANIMATION SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+
+  <script>
+    // HEADER ANIMATION
+    gsap.from(".page-header h1", {
+      opacity: 0,
+      y: -40,
+      duration: 1.2
+    });
+
+    gsap.from(".page-header p", {
+      opacity: 0,
+      y: 20,
+      duration: 1.2,
+      delay: 0.3
+    });
+
+    // NBN SECTION ANIMATION
+    gsap.from(".nbn-section", {
+      scrollTrigger: {
+        trigger: ".nbn-section",
+        start: "top 85%",
+      },
+      opacity: 0,
+      y: 40,
+      duration: 1
+    });
+
+    gsap.from(".nbn-card", {
+      scrollTrigger: {
+        trigger: ".nbn-section",
+        start: "top 80%",
+      },
+      opacity: 0,
+      scale: 0.9,
+      duration: 0.6,
+      stagger: 0.2
+    });
+
+    // CTA SECTION
+    gsap.from(".cta-section", {
+      scrollTrigger: {
+        trigger: ".cta-section",
+        start: "top 90%",
+      },
+      opacity: 0,
+      y: 40,
+      duration: 1
+    });
+  </script>
+
+</body>
+</html>
