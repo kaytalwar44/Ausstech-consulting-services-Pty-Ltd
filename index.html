@@ -146,6 +146,7 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="services.html">IT Services</a></li>
+      <li><a href="nbn.html">NBN Services</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -178,18 +179,8 @@
       </div>
 
       <div class="service-card">
-        <h3>Project Admin Support</h3>
-        <p>Efficient coordination, documentation, and scheduling to keep your projects on track and well-managed.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>Bookkeeping</h3>
-        <p>Accurate financial record-keeping, invoicing, and reconciliation to support your business operations.</p>
-      </div>
-
-      <div class="service-card">
-        <h3>General Office Works</h3>
-        <p>Reliable assistance with day-to-day office tasks including data entry, filing, and administrative support.</p>
+        <h3>NBN Services</h3>
+        <p>Complete end‑to‑end NBN solutions including installation, troubleshooting, speed optimisation, and customer assistance.</p>
       </div>
 
     </div>
@@ -210,63 +201,35 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2024 Ausstech Consulting Services. All rights reserved.</p>
+    <p>&copy; 2025 Ausstech Consulting Services. All rights reserved.</p>
   </footer>
 
-  <!-- GSAP ANIMATION SCRIPTS -->
+  <!-- GSAP -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
   <script>
-    // HERO FADE-IN
-    gsap.from(".hero h1", {
-      opacity: 0,
-      y: -40,
-      duration: 1.2
-    });
+    gsap.from(".hero h1", { opacity: 0, y: -40, duration: 1.2 });
+    gsap.from(".hero p", { opacity: 0, y: 20, duration: 1.2, delay: 0.3 });
+    gsap.from(".cta-btn", { opacity: 0, scale: 0.8, duration: 1, delay: 0.6 });
 
-    gsap.from(".hero p", {
-      opacity: 0,
-      y: 20,
-      duration: 1.2,
-      delay: 0.3
-    });
-
-    gsap.from(".cta-btn", {
-      opacity: 0,
-      scale: 0.8,
-      duration: 1,
-      delay: 0.6
-    });
-
-    // SERVICES CARDS ANIMATION
     gsap.from(".service-card", {
-      scrollTrigger: {
-        trigger: "#services",
-        start: "top 80%",
-      },
+      scrollTrigger: { trigger: "#services", start: "top 80%" },
       opacity: 0,
       y: 40,
       duration: 0.8,
       stagger: 0.2
     });
 
-    // WHY-US SECTION
     gsap.from("#why-us h2", {
-      scrollTrigger: {
-        trigger: "#why-us",
-        start: "top 85%",
-      },
+      scrollTrigger: { trigger: "#why-us", start: "top 85%" },
       opacity: 0,
       y: 30,
       duration: 1
     });
 
     gsap.from(".why-list li", {
-      scrollTrigger: {
-        trigger: "#why-us",
-        start: "top 80%",
-      },
+      scrollTrigger: { trigger: "#why-us", start: "top 80%" },
       opacity: 0,
       x: -30,
       duration: 0.6,
