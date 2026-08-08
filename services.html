@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ausstech Consulting - IT & Business Services" />
+  <meta name="description" content="Ausstech Consulting - Professional IT & Business Services" />
   <title>Services - Ausstech Consulting</title>
 
   <style>
@@ -43,13 +43,13 @@
 
     /* PAGE HEADER */
     .page-header {
-      background: linear-gradient(to right, #0077b6, #0096c7);
+      background: #0077b6;
       color: white;
-      padding: 80px 20px;
+      padding: 60px 20px;
       text-align: center;
     }
     .page-header h1 {
-      font-size: 2.8em;
+      font-size: 2.5em;
       margin-bottom: 10px;
     }
     .page-header p {
@@ -58,41 +58,79 @@
       margin: 0 auto;
     }
 
-    /* SERVICES SECTION */
-    #services {
-      padding: 60px 20px;
+    /* CATEGORY SECTION */
+    .category {
+      padding: 50px 20px;
       background: #ffffff;
+      margin-top: 40px;
+      border-radius: 10px;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    #services h2 {
+    .category h2 {
       text-align: center;
-      font-size: 2.2em;
-      margin-bottom: 40px;
+      font-size: 2em;
       color: #0077b6;
+      margin-bottom: 30px;
     }
-    .services-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+
+    /* SERVICE GRID */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
     }
+
     .service-card {
       background: #f9f9f9;
       padding: 25px;
       border-radius: 10px;
-      width: 100%;
-      max-width: 300px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
     }
     .service-card:hover {
       transform: translateY(-5px);
     }
+
     .service-card h3 {
       color: #0077b6;
       margin-top: 0;
+      margin-bottom: 10px;
     }
-    .service-card p {
+
+    .service-card ul {
+      padding-left: 20px;
       color: #555;
+      line-height: 1.6;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+      background: linear-gradient(to right, #0077b6, #0096c7);
+      color: white;
+      text-align: center;
+      padding: 60px 20px;
+      margin-top: 50px;
+    }
+    .cta-section h2 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+    .cta-section a {
+      background: white;
+      color: #0077b6;
+      padding: 12px 25px;
+      border-radius: 6px;
+      font-size: 1.1em;
+      font-weight: bold;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.3s;
+    }
+    .cta-section a:hover {
+      background: #e3e3e3;
     }
 
     /* FOOTER */
@@ -121,45 +159,108 @@
   <!-- PAGE HEADER -->
   <section class="page-header">
     <h1>Our Professional Services</h1>
-    <p>We provide reliable IT, cybersecurity, business support, and digital solutions tailored to your organisation.</p>
+    <p>Explore our full range of IT, cybersecurity, business support, and digital solutions.</p>
   </section>
 
-  <!-- SERVICES SECTION -->
-  <section id="services">
-    <h2>What We Offer</h2>
-    <div class="services-container">
+  <!-- CATEGORY 1 -->
+  <section class="category">
+    <h2>IT & Cybersecurity Services</h2>
+    <div class="service-grid">
 
       <div class="service-card">
         <h3>IT Consulting</h3>
-        <p>Infrastructure planning, cybersecurity strategy, cloud solutions, and digital transformation guidance.</p>
+        <ul>
+          <li>Infrastructure planning</li>
+          <li>Cloud migration guidance</li>
+          <li>Cybersecurity strategy</li>
+          <li>Digital transformation</li>
+        </ul>
       </div>
 
       <div class="service-card">
-        <h3>Website Development</h3>
-        <p>Custom websites, hosting, maintenance, and SEO‑ready designs to grow your online presence.</p>
+        <h3>Cybersecurity Support</h3>
+        <ul>
+          <li>Threat monitoring</li>
+          <li>Security audits</li>
+          <li>Firewall & network protection</li>
+          <li>Incident response</li>
+        </ul>
       </div>
 
       <div class="service-card">
         <h3>ERP & App Support</h3>
-        <p>Implementation, troubleshooting, and optimisation of ERP systems and business applications.</p>
+        <ul>
+          <li>ERP implementation</li>
+          <li>Application troubleshooting</li>
+          <li>Process automation</li>
+          <li>System optimisation</li>
+        </ul>
       </div>
+
+    </div>
+  </section>
+
+  <!-- CATEGORY 2 -->
+  <section class="category">
+    <h2>Business Support Services</h2>
+    <div class="service-grid">
 
       <div class="service-card">
         <h3>Project Admin Support</h3>
-        <p>Project coordination, documentation, scheduling, and stakeholder communication support.</p>
+        <ul>
+          <li>Project coordination</li>
+          <li>Documentation & reporting</li>
+          <li>Scheduling & planning</li>
+          <li>Stakeholder communication</li>
+        </ul>
       </div>
 
       <div class="service-card">
         <h3>Bookkeeping</h3>
-        <p>Accurate financial records, invoicing, reconciliation, and business reporting.</p>
+        <ul>
+          <li>Financial record keeping</li>
+          <li>Invoicing & reconciliation</li>
+          <li>Business reporting</li>
+          <li>Expense tracking</li>
+        </ul>
       </div>
 
       <div class="service-card">
         <h3>General Office Works</h3>
-        <p>Data entry, filing, admin support, and day‑to‑day office assistance.</p>
+        <ul>
+          <li>Data entry</li>
+          <li>Filing & admin tasks</li>
+          <li>Document preparation</li>
+          <li>Office support</li>
+        </ul>
       </div>
 
     </div>
+  </section>
+
+  <!-- CATEGORY 3 -->
+  <section class="category">
+    <h2>Digital & Web Services</h2>
+    <div class="service-grid">
+
+      <div class="service-card">
+        <h3>Website Development</h3>
+        <ul>
+          <li>Custom website design</li>
+          <li>Hosting & maintenance</li>
+          <li>SEO‑ready structure</li>
+          <li>Content updates</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="cta-section">
+    <h2>Need Professional Support?</h2>
+    <p>We’re ready to help your business grow with reliable IT and business solutions.</p>
+    <a href="contact.html">Contact Us</a>
   </section>
 
   <!-- FOOTER -->
@@ -172,7 +273,7 @@
   <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 
   <script>
-    // PAGE HEADER ANIMATION
+    // HEADER ANIMATION
     gsap.from(".page-header h1", {
       opacity: 0,
       y: -40,
@@ -186,15 +287,26 @@
       delay: 0.3
     });
 
-    // SERVICE CARDS ANIMATION
+    // CATEGORY TITLE ANIMATION
+    gsap.from(".category h2", {
+      scrollTrigger: {
+        trigger: ".category",
+        start: "top 85%",
+      },
+      opacity: 0,
+      y: 30,
+      duration: 1
+    });
+
+    // SERVICE CARDS ZOOM-IN ANIMATION
     gsap.from(".service-card", {
       scrollTrigger: {
-        trigger: "#services",
+        trigger: ".category",
         start: "top 80%",
       },
       opacity: 0,
-      y: 40,
-      duration: 0.8,
+      scale: 0.8,
+      duration: 0.6,
       stagger: 0.2
     });
   </script>
