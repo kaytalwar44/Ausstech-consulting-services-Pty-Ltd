@@ -128,6 +128,46 @@
       line-height: 1.6;
     }
 
+    /* ⭐ TESTIMONIALS SECTION CSS ⭐ */
+    #testimonials {
+      padding: 60px 20px;
+      background: #ffffff;
+    }
+    #testimonials h2 {
+      text-align: center;
+      font-size: 2.2em;
+      margin-bottom: 40px;
+      color: #0077b6;
+    }
+    .testimonial-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 25px;
+      justify-content: center;
+    }
+    .testimonial-card {
+      background: #f9f9f9;
+      padding: 25px;
+      border-radius: 10px;
+      width: 100%;
+      max-width: 300px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .testimonial-card img {
+      width: 100%;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+    .testimonial-card h4 {
+      margin: 10px 0 5px;
+      color: #0077b6;
+    }
+    .testimonial-card p {
+      color: #555;
+      line-height: 1.6;
+    }
+
     /* FOOTER */
     footer {
       background: #003049;
@@ -199,6 +239,58 @@
     </div>
   </section>
 
+  <!-- ⭐ TESTIMONIALS SECTION ⭐ -->
+  <section id="testimonials">
+    <h2>Client Testimonials</h2>
+    <div class="testimonial-container">
+
+      <!-- IT SERVICE TESTIMONIALS (3) -->
+      <div class="testimonial-card">
+        <img src="it_review1.jpg" alt="Client Photo">
+        <h4>John D.</h4>
+        <p>“Ausstech Consulting resolved our office IT issues quickly and professionally.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="it_review2.jpg" alt="Client Photo">
+        <h4>Sarah K.</h4>
+        <p>“Ausstech secured our systems and gave us peace of mind.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="it_review3.jpg" alt="Client Photo">
+        <h4>Michael P.</h4>
+        <p>“They rebuilt our website and fixed ERP issues with great expertise.”</p>
+      </div>
+
+      <!-- NBN SERVICE TESTIMONIALS (4) -->
+      <div class="testimonial-card">
+        <img src="nbn_review4.jpg" alt="Client Photo">
+        <h4>Mark T.</h4>
+        <p>“Daily dropouts fixed after Ausstech coordinated NBN repairs.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="nbn_review5.jpg" alt="Client Photo">
+        <h4>Olivia H.</h4>
+        <p>“Modem replaced and Wi‑Fi improved across the house.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="nbn_review6.jpg" alt="Client Photo">
+        <h4>Jason W.</h4>
+        <p>“Ausstech traced the fault to the pit and got NBN to fix it.”</p>
+      </div>
+
+      <div class="testimonial-card">
+        <img src="nbn_review7.jpg" alt="Client Photo">
+        <h4>Rebecca L.</h4>
+        <p>“Quick installation, neat work, and clear explanation.”</p>
+      </div>
+
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2022 Ausstech Consulting Services. All rights reserved.</p>
@@ -235,73 +327,20 @@
       duration: 0.6,
       stagger: 0.15
     });
+
+    /* ⭐ SLIDE-UP ANIMATION FOR TESTIMONIAL CARDS ⭐ */
+    gsap.from(".testimonial-card", {
+      scrollTrigger: {
+        trigger: "#testimonials",
+        start: "top 85%"
+      },
+      opacity: 0,
+      y: 50,
+      duration: 0.9,
+      stagger: 0.15,
+      ease: "power2.out"
+    });
   </script>
 
 </body>
 </html>
-<script>
-  gsap.from(".hero h1", { 
-    opacity: 0, 
-    y: -40, 
-    duration: 1.2 
-  });
-
-  gsap.from(".hero p", { 
-    opacity: 0, 
-    y: 20, 
-    duration: 1.2, 
-    delay: 0.3 
-  });
-
-  gsap.from(".cta-btn", { 
-    opacity: 0, 
-    scale: 0.8, 
-    duration: 1, 
-    delay: 0.6 
-  });
-
-  gsap.from(".service-card", {
-    scrollTrigger: { 
-      trigger: "#services", 
-      start: "top 80%" 
-    },
-    opacity: 0,
-    y: 40,
-    duration: 0.8,
-    stagger: 0.2
-  });
-
-  gsap.from("#why-us h2", {
-    scrollTrigger: { 
-      trigger: "#why-us", 
-      start: "top 85%" 
-    },
-    opacity: 0,
-    y: 30,
-    duration: 1
-  });
-
-  gsap.from(".why-list li", {
-    scrollTrigger: { 
-      trigger: "#why-us", 
-      start: "top 80%" 
-    },
-    opacity: 0,
-    x: -30,
-    duration: 0.6,
-    stagger: 0.15
-  });
-
-  /* ⭐ FINAL SLIDE-UP ANIMATION FOR ALL 13 TESTIMONIAL CARDS ⭐ */
-  gsap.from(".testimonial-card", {
-    scrollTrigger: {
-      trigger: "#testimonials",
-      start: "top 85%"
-    },
-    opacity: 0,
-    y: 50,
-    duration: 0.9,
-    stagger: 0.15,
-    ease: "power2.out"
-  });
-</script>
