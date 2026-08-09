@@ -149,6 +149,51 @@
       </div>
     </div>
 
+    <!-- ⭐ TRUST BADGES ⭐ -->
+    <div class="nbn-block has-text-centered">
+      <h2 class="title is-3">Why Auss‑Tech is Trusted</h2>
+      <p class="subtitle is-5">Certified, experienced and trusted by Sydney customers.</p>
+
+      <div class="columns is-multiline is-centered" style="margin-top: 20px;">
+
+        <div class="column is-2">
+          <div class="box nbn-card">
+            <h3 class="title is-6">ABN Registered</h3>
+            <p>Fully compliant Australian business.</p>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="box nbn-card">
+            <h3 class="title is-6">Police Checked</h3>
+            <p>Safe and verified technicians.</p>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="box nbn-card">
+            <h3 class="title is-6">5‑Star Reviews</h3>
+            <p>Trusted by Sydney customers.</p>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="box nbn-card">
+            <h3 class="title is-6">NBN Experienced</h3>
+            <p>Over 10 years of field experience.</p>
+          </div>
+        </div>
+
+        <div class="column is-2">
+          <div class="box nbn-card">
+            <h3 class="title is-6">Same‑Day Service</h3>
+            <p>Fast response across Sydney.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
     <!-- CONTACT -->
     <div class="has-text-centered nbn-block">
       <h2 class="title is-3">Book Your NBN Technician</h2>
@@ -170,6 +215,13 @@
   });
 
   gsap.from(".nbn-card", {
+    opacity: 0,
+    y: 30,
+    duration: 0.6,
+    stagger: 0.15
+  });
+
+  gsap.from(".box", {
     opacity: 0,
     y: 30,
     duration: 0.6,
