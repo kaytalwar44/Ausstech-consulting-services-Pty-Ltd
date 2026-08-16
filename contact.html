@@ -1,270 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact Ausstech Consulting - IT & Cybersecurity Support" />
-  <title>Contact - Ausstech Consulting</title>
+<script>
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f5f7fa;
-      color: #333;
-    }
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
 
-    /* NAVIGATION */
-    nav {
-      background: #ffffff;
-      padding: 15px 30px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
-      justify-content: center;
-    }
-    nav a {
-      text-decoration: none;
-      color: #0077b6;
-      font-weight: bold;
-      font-size: 1.1em;
-    }
-    nav a:hover {
-      color: #005f8a;
-    }
+    const data = new FormData(form);
 
-    /* PAGE HEADER */
-    .page-header {
-      background: linear-gradient(to right, #0077b6, #0096c7);
-      color: white;
-      padding: 70px 20px;
-      text-align: center;
-    }
-    .page-header h1 {
-      font-size: 2.8em;
-      margin-bottom: 10px;
-    }
-    .page-header p {
-      font-size: 1.2em;
-      max-width: 700px;
-      margin: 0 auto;
-    }
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { "Accept": "application/json" }
+      });
 
-    /* CONTACT SECTION */
-    .contact-section {
-      max-width: 1100px;
-      margin: 40px auto;
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 40px;
+      if (response.ok) {
+        status.textContent = "Message sent successfully!";
+        status.className = "form-status success";
+        form.reset();
+      } else {
+        status.textContent = "Something went wrong. Please try again.";
+        status.className = "form-status error";
+      }
+    } catch (error) {
+      status.textContent = "Network error. Please try again.";
+      status.className = "form-status error";
     }
-
-    /* CONTACT INFO */
-    .contact-info h2 {
-      color: #0077b6;
-      margin-bottom: 20px;
-      font-size: 2em;
-    }
-    .contact-info p {
-      font-size: 1.1em;
-      line-height: 1.6;
-    }
-    .contact-info a {
-      color: #0077b6;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .contact-info a:hover {
-      text-decoration: underline;
-    }
-
-    /* CONTACT FORM */
-    .contact-form h2 {
-      color: #0077b6;
-      margin-bottom: 20px;
-      font-size: 2em;
-    }
-    .contact-form form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .contact-form input,
-    .contact-form textarea {
-      padding: 12px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      font-size: 1em;
-    }
-    .contact-form button {
-      background: #0077b6;
-      color: white;
-      padding: 12px;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.1em;
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .contact-form button:hover {
-      background: #005f8a;
-    }
-
-    /* SUCCESS / ERROR MESSAGE */
-    .form-status {
-      margin-top: 10px;
-      font-size: 1em;
-      font-weight: bold;
-    }
-    .success {
-      color: green;
-    }
-    .error {
-      color: red;
-    }
-
-    /* TRUST SECTION */
-    .trust-section {
-      max-width: 1100px;
-      margin: 30px auto;
-      background: #ffffff;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .trust-section h2 {
-      font-size: 2.2em;
-      color: #0077b6;
-      margin-bottom: 25px;
-    }
-    .trust-section ul {
-      list-style: none;
-      padding: 0;
-      max-width: 700px;
-      margin: 0 auto;
-      font-size: 1.2em;
-      line-height: 1.8;
-      color: #555;
-    }
-    .trust-section li {
-      margin-bottom: 10px;
-    }
-
-    /* CTA SECTION */
-    .cta-section {
-      background: #003049;
-      color: white;
-      text-align: center;
-      padding: 50px 20px;
-      margin-top: 40px;
-    }
-    .cta-section h2 {
-      font-size: 2.2em;
-      margin-bottom: 20px;
-    }
-    .cta-section a {
-      background: white;
-      color: #003049;
-      padding: 12px 25px;
-      border-radius: 6px;
-      font-size: 1.1em;
-      font-weight: bold;
-      text-decoration: none;
-      display: inline-block;
-      transition: 0.3s;
-    }
-    .cta-section a:hover {
-      background: #e3e3e3;
-    }
-
-    /* FOOTER */
-    footer {
-      background: #001d33;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
-</head>
-
-<body>
-
-  <!-- NAVIGATION -->
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="services.html">IT Services</a></li>
-      <li><a href="nbn.html">NBN Services</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- PAGE HEADER -->
-  <section class="page-header">
-    <h1>Contact Us</h1>
-    <p>We’re here to help with IT, cybersecurity, business support, and digital solutions.</p>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="contact-section">
-
-    <!-- CONTACT INFO -->
-    <div class="contact-info">
-      <h2>Get in Touch</h2>
-      <p><strong>Phone:</strong> <a href="tel:0416236105">0416 236 105</a></p>
-      <p><strong>Email:</strong> <a href="mailto:info@auss-tech.com.au">info@auss-tech.com.au</a></p>
-      <p>We aim to respond within 24 hours.</p>
-      <p>Whether you need IT support, cybersecurity protection, or business assistance — we’re ready to help.</p>
-    </div>
-
-    <!-- CONTACT FORM -->
-    <div class="contact-form">
-      <h2>Send Us a Message</h2>
-
-      <form id="contactForm" action="https://formspree.io/f/mrpzejln" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="text" name="phone" placeholder="Your Phone Number" />
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-
-      <div id="formStatus" class="form-status"></div>
-    </div>
-
-  </section>
-
-  <!-- TRUST SECTION -->
-  <section class="trust-section">
-    <h2>Why Businesses Choose Ausstech Consulting</h2>
-    <ul>
-      <li>✔ Fast response and reliable support</li>
-      <li>✔ Affordable solutions for small and medium businesses</li>
-      <li>✔ Professional IT & cybersecurity expertise</li>
-      <li>✔ Tailored services to match your business goals</li>
-    </ul>
-  </section>
-
-  <!-- CTA SECTION -->
-  <section class="cta-section">
-    <h2>Need Immediate Assistance?</h2>
-    <p>Call us directly or send a message — we’re ready to support your business.</p>
-    <a href="tel:0416236105">Call Now</a>
-  </section>
-
-  <!-- FOOTER -->
-  <footer
+  });
+</script>
